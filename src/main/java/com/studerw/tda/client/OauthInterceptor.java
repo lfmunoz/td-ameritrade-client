@@ -35,6 +35,7 @@ class OauthInterceptor implements Interceptor {
   public OauthInterceptor(HttpTdaClient client, Properties properties) {
     this.client = client;
     this.properties = properties;
+    this.accessToken = this.properties.getProperty("tda.token.access");
   }
 
   @Override
